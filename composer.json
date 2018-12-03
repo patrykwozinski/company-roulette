@@ -19,14 +19,12 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/",
-            "RecruitmentAnalyzer\\": "src/RecruitmentAnalyzer/"
+            "RecruitmentAnalyzer\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "App\\Tests\\": "tests/",
-            "RecruitmentAnalyzer\\Tests\\": "tests/RecruitmentAnalyzer"
+            "Tests\\": "tests/"
         }
     },
     "replace": {

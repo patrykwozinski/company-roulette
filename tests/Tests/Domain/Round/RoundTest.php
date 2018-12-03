@@ -12,6 +12,7 @@ namespace Tests\Domain\Round;
 
 use CompanyRoulette\Domain\Round\Exception\CannotStartRoundException;
 use CompanyRoulette\Domain\Round\Round;
+use Tests\Infrastructure\Event\EventDispatcherSpy;
 use Tests\TestCase;
 
 final class RoundTest extends TestCase
@@ -25,5 +26,20 @@ final class RoundTest extends TestCase
 
         $round = new Round([]);
         $round->start();
+    }
+
+    /**
+     * @test
+     */
+    public function it_starts_when_participants_ok(): void
+    {
+        $eventDispatcher = new EventDispatcherSpy;
+
+        $round = new Round([1]);
+        $round->registerEventDispatcher($eventDispatcher);
+        $round->start();
+
+        $this->assertInstanceOf(\DateTimeInterface::class, $round->startedAt());
+        $eventDispatcher->spyDispatched('domain.round.started');
     }
 }

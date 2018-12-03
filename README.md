@@ -1,22 +1,6 @@
-# Symfony 4 ES CQRS Boilerplate
+# Company Roulette
 
-A boilerplate for DDD, CQRS, Event Sourcing applications using Symfony as framework and running with php7
-
-[![Build Status](https://travis-ci.org/jorge07/symfony-4-es-cqrs-boilerplate.svg?branch=master)](https://travis-ci.org/jorge07/symfony-4-es-cqrs-boilerplate)
-[![Coverage Status](https://coveralls.io/repos/github/jorge07/symfony-4-es-cqrs-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/jorge07/symfony-4-es-cqrs-boilerplate?branch=coverage)
-[![StyleCI](https://github.styleci.io/repos/116064483/shield?branch=master)](https://github.styleci.io/repos/116064483)
-
-## Documentation
-
-[Buses](https://github.com/jorge07/symfony-4-es-cqrs-boilerplate/tree/master/doc/GetStarted/Buses.md)
-
-[Creating an Application Use Case](https://github.com/jorge07/symfony-4-es-cqrs-boilerplate/tree/master/doc/GetStarted/UseCases.md)
-
-[Adding Projections](https://github.com/jorge07/symfony-4-es-cqrs-boilerplate/tree/master/doc/GetStarted/Projections.md)
-
-[Async executions](https://github.com/jorge07/symfony-4-es-cqrs-boilerplate/tree/master/doc/GetStarted/Async.md)
-
-[UI workflow](https://github.com/jorge07/symfony-4-es-cqrs-boilerplate/blob/master/doc/Workflow.md)
+Roulette app for company.
 
 ## Architecture
 
@@ -33,16 +17,6 @@ A boilerplate for DDD, CQRS, Event Sourcing applications using Symfony as framew
 - [x] Web UI (A Terrible UX/UI)
 - [x] Event Store Rest API 
 - [x] Swagger API Doc
-
-## Use Cases
-
-#### User
-- [x] Sign up
-- [x] Change Email
-- [x] Sign in
-- [x] Logout
-
-![API Doc](https://i.imgur.com/DBZsPlE.png)
 
 ## Stack
 
@@ -82,28 +56,3 @@ Disable\Enable Xdebug:
 `make xoff`
 
 `make xon`
-
-Build image to deploy
-
-`make artifact`
-
-## PHPStorm integration
-
-PHPSTORM has native integration with Docker compose. That's nice but will stop your php container after run the test scenario. That's not nice when using fpm. A solution could be use another container just for that purpose. But I don't want. For that reason I use ssh connection.
-
-IMPORTANT
-
-> ssh in the container it's ONLY for that reason, if you've ssh installed in your production container, you're doing it wrong... 
-
-Use ssh remote connection.
----
-
-Host: 
-- Docker 4 Mac: `localhost`
-- docker machine OR dinghy: `192.168.99.100`
-
-Port: 
- - `2323`
-
-Filesystem mapping:
- - `{PROJECT_PATH}` -> `/app`

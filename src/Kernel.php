@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App;
+namespace CompanyRoulette;
 
 
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;

@@ -10,4 +10,4 @@ cs-dry:
 	php ./vendor/bin/php-cs-fixer --no-interaction --diff --dry-run -v fix
 
 phpunit:
-	./vendor/bin/phpunit
+	./bin/phpunit

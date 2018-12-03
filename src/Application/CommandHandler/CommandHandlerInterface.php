@@ -7,10 +7,10 @@
  */
 declare(strict_types=1);
 
-namespace Application\Handler;
+namespace CompanyRoulette\Application\CommandHandler;
 
 
-use Application\Command\CommandInterface;
+use CompanyRoulette\Application\Command\CommandInterface;
 
 interface CommandHandlerInterface
 {

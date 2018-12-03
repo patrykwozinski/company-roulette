@@ -7,7 +7,7 @@
  */
 declare(strict_types=1);
 
-namespace Application\Command;
+namespace CompanyRoulette\Application\Command;
 
 
 interface CommandInterface

@@ -5,10 +5,10 @@ services:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 
-    App\:
+    CompanyRoulette\:
         resource: '../src/*'
-        exclude: '../src/**/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
+        exclude: '../src/Infrastructure/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
 
-    App\Controller\:
+    CompanyRoulette\UserInterface\Http\Web\Controller\:
         resource: '../src/UserInterface/Http/Web/Controller'
         tags: ['controller.service_arguments']

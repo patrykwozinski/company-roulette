@@ -19,7 +19,7 @@
     },
     "autoload": {
         "psr-4": {
-            "RecruitmentAnalyzer\\": "src/"
+            "CompanyRoulette\\": "src/"
         }
     },
     "autoload-dev": {
@@ -59,6 +59,7 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.13",
         "phpstan/phpstan": "^0.10.5",
+        "ramsey/uuid": "^3.8",
         "symfony/phpunit-bridge": "*"
     }
 }
